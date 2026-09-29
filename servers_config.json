@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "${PYTHON_EXECUTABLE}",
+      "args": ["weather_server.py"],
+      "env": {"OPENWEATHER_API_KEY": "${OPENWEATHER_API_KEY:-}"},
+      "transport": "stdio"
+    },
+    "write": {
+      "command": "${PYTHON_EXECUTABLE}",
+      "args": ["write_server.py"],
+      "transport": "stdio"
+    },
+    "amap-maps": {
+      "enabled": false,
+      "optional": true,
+      "transport": "sse",
+      "url": "${AMAP_MCP_SSE_URL}"
+    }
+  }
+}

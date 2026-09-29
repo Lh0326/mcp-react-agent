@@ -1,0 +1,5 @@
+@import './base.css';
+
+#app { min-height: 100dvh; }
+button, textarea { font: inherit; }
+button { cursor: pointer; }
